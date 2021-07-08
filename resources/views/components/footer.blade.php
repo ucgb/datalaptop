@@ -3,10 +3,10 @@
     <div class="container p-4"></div>
     <!-- Grid container -->
 
-    <!-- Copyright -->
+    {{--  <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgb(255, 30, 206);">
       © 2021 Copyright:
       <a class="text-white" href="https://www.facebook.com/sofanji.oscar">sofanji</a>
     </div>
-    <!-- Copyright -->
+    <!-- Copyright -->  --}}
   </footer>

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Post;
 
 
@@ -15,14 +16,14 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    //  landing page 
+    //  landing page
     public function view()
-    {    
+    {
         $posts = Post::orderBy('id', 'desc')->paginate(4);
         return view('/pages.index', ['posts' => $posts]);
     }
 
-        /**
+    /**
      * Show the application dashboard.
      *
      * @return \Illuminate\Contracts\Support\Renderable
@@ -38,14 +39,14 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    //  landing page 
+    //  landing page
     public function index()
-    {    
+    {
         $userId = auth()->user()->id;
         // $posts = Post::where(['user_id' => $userId])->get();
         $posts = Post::where(['user_id' => $userId])
-                    -> orderBy('id', 'desc')
-                    ->paginate(4);
+            ->orderBy('id', 'desc')
+            ->paginate(4);
         return view('/pages/post.view', ['posts' => $posts]);
     }
 
@@ -68,16 +69,16 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $input = $request->validate([
-            'nama' => 'required',
-            'nip' => 'required',
-            'alamat' => 'required',
+            'merk' => 'required',
+            'seri' => 'required',
+            'tahun' => 'required',
         ]);
 
         $userId = auth()->user()->id;
         $input = $request->input();
         $input['user_id'] = $userId;
         $postStatus = post::create($input);
-        
+
         if ($postStatus) {
             $request->session()->flash('success', 'Post successfully added');
         } else {
@@ -112,7 +113,7 @@ class PostController extends Controller
         $userId = auth()->user()->id;
         $post = Post::where(['user_id' => $userId, 'id' => $id])->first();
         if ($post) {
-            return view('pages.post.edit', [ 'post' => $post ]);
+            return view('pages.post.edit', ['post' => $post]);
         } else {
             return redirect('post')->with('error', 'post not found');
         }
@@ -140,7 +141,6 @@ class PostController extends Controller
         } else {
             return redirect('post')->with('error', 'Oops something went wrong. Post not updated');
         }
-
     }
 
     /**

@@ -20,15 +20,15 @@
         <div class="col-md-12">
             <br><br>
         	<div class="post-title">
-                <strong>Nama: </strong> {{ $post->nama }}
+                <strong>Merk Laptop: </strong> {{ $post->merk }}
             </div>
             <br>
             <div class="post-description">
-                <strong>NIP: </strong> {{ $post->nip }}
+                <strong>Seri Laptop: </strong> {{ $post->seri }}
             </div>
             <br>
             <div class="post-description">
-                <strong>Alamat: </strong> {{ $post->alamat }}
+                <strong>Tahun Terbit: </strong> {{ $post->tahun }}
             </div>
         </div>
     </div>

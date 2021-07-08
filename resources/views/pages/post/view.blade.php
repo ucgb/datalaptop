@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('nama')
+@section('merk')
 My Post
 @endsection
 
@@ -9,7 +9,7 @@ My Post
   <br>
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <h2>Data Pegawai</h2>
+            <h2>Data Laptop</h2>
         </div>
         <div class="col-md-6">
             <div class="float-right">
@@ -33,9 +33,9 @@ My Post
             <table class="table table-bordered">
         <thead class="thead-light">
             <tr>
-                <th>Nama</th>
-                <th>NIP</th>
-                <th>Alamat</th>
+                <th>Merk Laptop</th>
+                <th>Seri Laptop</th>
+                <th>Tahun Terbit</th>
                 <th>Posted Date</th>
                 <th>Updated</th>
                 <th>Action</th>
@@ -44,9 +44,9 @@ My Post
         <tbody>
           @forelse ($posts as $post)
               <tr>
-              <th>{{ $post->nama }}</th>
-              <td>{{ $post->nip }}</td>
-              <td>{{ $post->alamat }}</td>
+              <th>{{ $post->merk }}</th>
+              <td>{{ $post->seri }}</td>
+              <td>{{ $post->tahun }}</td>
               <td>{{ $post->created_at }}</td>
               <td>{{ $post->updated }}</td>
               <td>

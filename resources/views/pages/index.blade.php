@@ -11,7 +11,7 @@ Home
   <br>
     <div class="row justify-content-center">
     	<div class="col-md-6 table-responsive">
-    		<h2>Aplikasi Data Pegawai</h2>
+    		<h2>Aplikasi Data Laptop</h2>
         </div>
 
           @forelse ($posts as $post)

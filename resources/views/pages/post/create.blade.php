@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('nama')
+@section('merk')
     Create Post
 @endsection
 
@@ -30,23 +30,23 @@
       <form action="{{ route('post.store') }}" method="POST">
         @csrf
         <div class="form-group">
-          <label for="nama">Nama :</label>
-          <input type="text" class="form-control" id="nama" name="nama" required>
+          <label for="merk">Merk laptop :</label>
+          <input type="text" class="form-control" id="merk" merk="merk" required>
         </div>
         <div class="form-group">
-          <label for="nip">Nip:</label>
-          <textarea name="nip" class="form-control" id="nip" rows="5" required></textarea>
+          <label for="seri">Seri Laptop:</label>
+          <textarea name="seri" class="form-control" id="seri" rows="5" required></textarea>
         </div>
         <div class="form-group">
-          <label for="alamat">Alamat:</label>
-          <textarea name="alamat" class="form-control" id="alamat" rows="5" required></textarea>
+          <label for="tahun">Tahun Produksi:</label>
+          <textarea name="tahun" class="form-control" id="tahun" rows="5" required></textarea>
         </div>
-        
+
         <button type="submit" class="btn btn-primary">Submit Post</button>
       </form>
         </div>
     </div>
-    
+
 </div>
 <x-footer />
 @endsection

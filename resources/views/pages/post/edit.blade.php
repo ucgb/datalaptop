@@ -32,16 +32,16 @@
 				@csrf
                 @method('PUT')
 				<div class="form-group">
-					<label for="nama">Nama:</label>
-					<input type="text" required class="form-control" id="nama" name="nama" value="{{ $post->nama }}">
+					<label for="merk">Merk Laptop:</label>
+					<input type="text" required class="form-control" id="merk" name="merk" value="{{ $post->merk }}">
 				</div>
 				<div class="form-group">
-					<label for="nip">NIP:</label>
-					<textarea name="nip" class="form-control" id="nip" rows="5" required>{{ $post->nip }}</textarea>
+					<label for="seri">Seri Laptop:</label>
+					<textarea name="seri" class="form-control" id="seri" rows="5" required>{{ $post->seri }}</textarea>
 				</div>
 				<div class="form-group">
-					<label for="alamat">Alamat:</label>
-					<textarea name="alamat" class="form-control" id="alamat" rows="5" required>{{ $post->alamat }}</textarea>
+					<label for="tahun">Tahun terbit:</label>
+					<textarea name="tahun" class="form-control" id="tahun" rows="5" required>{{ $post->tahun }}</textarea>
 				</div>
 				<div class="form-group">
 				<label for="status">Select post status</label>
